@@ -231,7 +231,7 @@ class MainWindow(QMainWindow):
     # 保存文件
     def save_data(self):
         print('test')
-˚
+        print('dev')
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
