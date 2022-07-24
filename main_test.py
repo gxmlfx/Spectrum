@@ -210,13 +210,16 @@ class MainWindow(QMainWindow):
         # self.Ys = [CurrentSamples1(self.names, self.data, serial) for serial in serials]
         # self.Ys.append(self.selected_samples)
 
+    # 计算表里的样品相似度，需要增加一个判断新增样品和已经计算的样品
     def cal_table(self):
         xs_dict = [vars(x) for x in self.Xs]
         ys_dict = [vars(y) for y in self.Ys]
         ps = [PS.coffrelate(xs_dict[i], ys_dict[i]) for i in range(len(xs_dict))]
+        sim_of_scatter = [PS.cal_cof_of_scatter(self.Xs[i], self.Ys[i]) for i in range(len(self.Xs))]
         if not self.ui.tableCorrelation.item(0, 2):
             for i in range(len(ps)):
-                self.ui.tableCorrelation.setItem(i, 2, QTableWidgetItem(str(ps[i])))
+                self.ui.tableCorrelation.setItem(i, 2, QTableWidgetItem(ps[i]))
+                self.ui.tableCorrelation.setItem(i, 3, QTableWidgetItem(sim_of_scatter[i]))
         else:
             b = []
             for i in range(self.ui.tableCorrelation.rowCount()):
@@ -228,6 +231,7 @@ class MainWindow(QMainWindow):
                     b.append(a)
             for i in range(len(ps)):
                 self.ui.tableCorrelation.setItem(len(b) + i, 2, QTableWidgetItem(ps[i]))
+                self.ui.tableCorrelation.setItem(len(b) + i, 3, QTableWidgetItem(sim_of_scatter[i]))
     # 保存文件
     def save_data(self):
         print('test')
