@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="test">
-  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.39">
-    <root id="1">
-      <ServerVersion>3.36.0</ServerVersion>
-    </root>
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.40">
+    <root id="1"/>
     <collation id="2" parent="1" name="RTRIM"/>
     <collation id="3" parent="1" name="NOCASE"/>
     <collation id="4" parent="1" name="BINARY"/>
@@ -1340,6 +1338,7 @@
     <key id="490" parent="473">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>ID</UnderlyingIndexColNames>
     </key>
     <column id="491" parent="474" name="ID">
       <AutoIncrement>1</AutoIncrement>
@@ -1407,6 +1406,7 @@
     <key id="506" parent="474">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>ID</UnderlyingIndexColNames>
     </key>
     <key id="507" parent="474">
       <ColNames>ItemName</ColNames>
@@ -1523,6 +1523,7 @@
     <key id="534" parent="475">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>ID</UnderlyingIndexColNames>
     </key>
     <column id="535" parent="476" name="ID">
       <AutoIncrement>1</AutoIncrement>
@@ -1581,6 +1582,7 @@
     <key id="547" parent="476">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>ID</UnderlyingIndexColNames>
     </key>
     <key id="548" parent="476">
       <ColNames>UserName</ColNames>
@@ -1628,6 +1630,7 @@
     <key id="558" parent="477">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>ID</UnderlyingIndexColNames>
     </key>
     <column id="559" parent="478" name="type">
       <DataType>text|0s</DataType>

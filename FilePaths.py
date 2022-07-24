@@ -1,9 +1,13 @@
 import fnmatch
 import os
+import platform
 from os.path import join, isdir
 
-# datas_path = os.getenv('XrfV2DataRoot') + r'temp\PhecdaHE\SpectrumFolder/'  # 读取环境变量里datas的位置
-datas_path = '/Users/gxmlfx/PhcdaHe/SpectrumFolder/'  # Unix目录
+
+if platform.system() == 'Windows':
+    datas_path = os.getenv('XrfV2DataRoot') + r'temp\PhecdaHE\SpectrumFolder/'  # 读取环境变量里datas的位置
+elif platform.system() == 'Linux' or platform.system() == 'Darwin':
+    datas_path = '/Users/gxmlfx/PhcdaHe/SpectrumFolder/'  # Unix目录
 # mcas = glob.glob(datas_path + '*/*/*.csv')
 apps = [apps for apps in os.listdir(datas_path) if isdir(join(datas_path, apps))]
 # apps = []
