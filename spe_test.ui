@@ -322,17 +322,7 @@
          </column>
          <column>
           <property name="text">
-           <string>应用-日期</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
            <string>样品名B</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>应用-日期</string>
           </property>
          </column>
          <column>

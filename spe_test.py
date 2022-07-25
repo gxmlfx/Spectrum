@@ -225,8 +225,8 @@ class Ui_MainWindow(object):
         self.gridLayout.addLayout(self.horizontalLayout_5, 1, 0, 1, 1)
 
         self.tableCorrelation = QTableWidget(self.groupBox_2)
-        if (self.tableCorrelation.columnCount() < 7):
-            self.tableCorrelation.setColumnCount(7)
+        if (self.tableCorrelation.columnCount() < 5):
+            self.tableCorrelation.setColumnCount(5)
         __qtablewidgetitem = QTableWidgetItem()
         self.tableCorrelation.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
@@ -237,10 +237,6 @@ class Ui_MainWindow(object):
         self.tableCorrelation.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         __qtablewidgetitem4 = QTableWidgetItem()
         self.tableCorrelation.setHorizontalHeaderItem(4, __qtablewidgetitem4)
-        __qtablewidgetitem5 = QTableWidgetItem()
-        self.tableCorrelation.setHorizontalHeaderItem(5, __qtablewidgetitem5)
-        __qtablewidgetitem6 = QTableWidgetItem()
-        self.tableCorrelation.setHorizontalHeaderItem(6, __qtablewidgetitem6)
         self.tableCorrelation.setObjectName(u"tableCorrelation")
         self.tableCorrelation.setSortingEnabled(False)
 
@@ -298,17 +294,13 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem = self.tableCorrelation.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"\u6837\u54c1\u540dA", None));
         ___qtablewidgetitem1 = self.tableCorrelation.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"\u5e94\u7528-\u65e5\u671f", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"\u6837\u54c1\u540dB", None));
         ___qtablewidgetitem2 = self.tableCorrelation.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"\u6837\u54c1\u540dB", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"\u7279\u5f81\u5cf0\u76f8\u4f3c\u5ea6", None));
         ___qtablewidgetitem3 = self.tableCorrelation.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"\u5e94\u7528-\u65e5\u671f", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"\u6563\u5c04\u5cf0\u76f8\u4f3c\u5ea6", None));
         ___qtablewidgetitem4 = self.tableCorrelation.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"\u7279\u5f81\u5cf0\u76f8\u4f3c\u5ea6", None));
-        ___qtablewidgetitem5 = self.tableCorrelation.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"\u6563\u5c04\u5cf0\u76f8\u4f3c\u5ea6", None));
-        ___qtablewidgetitem6 = self.tableCorrelation.horizontalHeaderItem(6)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"\u76f8\u4f3c\u5ea6", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"\u76f8\u4f3c\u5ea6", None));
         self.menu.setTitle(QCoreApplication.translate("MainWindow", u"\u6587\u4ef6", None))
     # retranslateUi
 

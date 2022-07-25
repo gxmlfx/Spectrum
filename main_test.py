@@ -165,7 +165,8 @@ class MainWindow(QMainWindow):
         for i in range(rowCount):
             self.ui.tableCorrelation.removeRow(k)
             k -= 1
-
+        self.Xs = []
+        self.Ys = []
     # 选择探测器
     def change_detector(self):
         print('Changed')
@@ -216,26 +217,32 @@ class MainWindow(QMainWindow):
         ys_dict = [vars(y) for y in self.Ys]
         ps = [PS.coffrelate(xs_dict[i], ys_dict[i]) for i in range(len(xs_dict))]
         sim_of_scatter = [PS.cal_cof_of_scatter(self.Xs[i], self.Ys[i]) for i in range(len(self.Xs))]
-        if not self.ui.tableCorrelation.item(0, 2):
-            for i in range(len(ps)):
-                self.ui.tableCorrelation.setItem(i, 2, QTableWidgetItem(ps[i]))
-                self.ui.tableCorrelation.setItem(i, 3, QTableWidgetItem(sim_of_scatter[i]))
-        else:
-            b = []
-            for i in range(self.ui.tableCorrelation.rowCount()):
-                item = self.ui.tableCorrelation.item(i, 2)
-                if not item:
-                    break
-                else:
-                    a = item.text()
-                    b.append(a)
-            for i in range(len(ps)):
-                self.ui.tableCorrelation.setItem(len(b) + i, 2, QTableWidgetItem(ps[i]))
-                self.ui.tableCorrelation.setItem(len(b) + i, 3, QTableWidgetItem(sim_of_scatter[i]))
+        for i in range(self.ui.tableCorrelation.rowCount()):
+            self.ui.tableCorrelation.setItem(i, 2, QTableWidgetItem(ps[i]))
+            self.ui.tableCorrelation.setItem(i, 3, QTableWidgetItem(sim_of_scatter[i]))
+        # print(ps)
+        # print(sim_of_scatter)
+        # if not self.ui.tableCorrelation.item(0, 2):
+        #     for i in range(len(ps)):
+        #         self.ui.tableCorrelation.setItem(i, 2, QTableWidgetItem(ps[i]))
+        #         self.ui.tableCorrelation.setItem(i, 3, QTableWidgetItem(sim_of_scatter[i]))
+        # else:
+        #     b = []
+        #     for i in range(self.ui.tableCorrelation.rowCount()):
+        #         item = self.ui.tableCorrelation.item(i, 2)
+        #         if not item:
+        #             break
+        #         else:
+        #             a = item.text()
+        #             b.append(a)
+        #     for i in range(len(ps)):
+        #         self.ui.tableCorrelation.setItem(len(b) + i, 2, QTableWidgetItem(ps[i]))
+        #         self.ui.tableCorrelation.setItem(len(b) + i, 3, QTableWidgetItem(sim_of_scatter[i]))
+
     # 保存文件
     def save_data(self):
         print('test')
-        print('dev')
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
