@@ -9,7 +9,7 @@ from spe_test import Ui_MainWindow
 import Read_Spectrum as RS
 import Draw_csv as dc
 import FilePaths as fps
-from Read_Spectrum import CurrentSamples, CurrentSamples1
+from Read_Spectrum import CurrentSamples1
 import Process_Spectrum as PS
 
 
